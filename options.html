@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LocoHost Options</title>
+	<style>
+		.container {
+			position: relative;
+		  margin: auto;
+		  width: 720px;
+		  background-color: rgba(255,255,255,0.9);
+		  padding: 1em;
+		  border-radius: 5px;
+		  margin-top: .5em;
+		}
+		body {
+		  font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+		  font-size: 100%;
+		}
+		h1 {
+		  margin-top: .5em;
+		  color: #177ff3;
+		  text-align: center;
+		  font-family: arial, helvetica;
+		}
+		#items {
+		  display: table;
+		  margin: auto;
+		  margin-top: 2em;
+		}
+		.item {
+		  padding: 1em;
+		  display: table-row;
+		}
+		.item:last-child .form-group {
+		  border-bottom-width: 0
+		}
+		.item + .item {
+		}
+		label, input {
+		  display: block
+		}
+		input:focus {
+		  background-color: #177ff3;
+		  color: white;
+		  box-shadow: none;
+		  outline: none;
+		}
+		label {
+		  color: #177ff3;
+		  font-size: .8em;
+			user-drag: none; 
+			user-select: none;
+			-webkit-user-drag: none;
+			-webkit-user-select: none;
+		}
+		input {
+			background-color: #F6F6F9;
+			transition: background-color .125s, color .125s;
+		  font-size: .9em;
+		  margin-top: .25em;
+		  margin-bottom: 0;
+		  padding: 1em;
+		  padding-top: .75em;
+		  padding-bottom: .75em;
+			border-radius: 3px;
+		  border: 1px solid #11A;
+		  color: #177ff3;
+		}
+		.form-group {
+		  display: table-cell;
+		  padding: .75em;
+		}
+		.item:first-child .form-group {
+			padding-bottom: 0;
+			padding-top: 0;
+		}
+		.form-group.remove {
+			vertical-align: middle;
+		}
+		button {
+			user-drag: none; 
+			user-select: none;
+			-webkit-user-drag: none;
+			-webkit-user-select: none;
+		}
+		button:not(.remove-button) {
+		  font-size: 1em;
+		  margin: auto;
+		  margin-top: 1em;
+		  margin-bottom: 1em;
+		  
+		  color: white;
+		  border-width: 0;
+		  border-radius: 4px;
+		  padding: .75em;
+		  padding-left: 1.25em;
+		  padding-right: 1.25em;
+		  transition: background-color .25s;
+		  text-align: left;
+		}
+		button.remove-button {
+			border-width: 0;
+			background-color: transparent;
+		}
+		button.remove-button img {
+			width: 24px;
+			height: 24px;
+			vertical-align: bottom;
+			user-drag: none; 
+			user-select: none;
+			-webkit-user-drag: none;
+			-webkit-user-select: none;
+		}
+		button.remove-button:hover {
+			background-color: transparent;
+			opacity: 0.8;
+		}
+		button:focus {
+			outline: none;
+		}
+		button:hover {
+		  cursor: pointer;
+		}
+		#status {
+			padding-left: 1em;
+		  text-align: center;
+		  float: left;
+		  color: #177ff3;
+		  opacity: 0.8;
+		  font-size: 0.7em;
+		}
+		.buttons {
+			margin-top: .25em;
+			padding-left: .75em;
+			padding-right: 1em;
+			width: auto;
+			overflow: hidden;
+		}
+		.buttons button {
+			float: left;
+		}
+		.buttons button + button {
+			float: right;
+		}
+		button#add {
+			background-color: #ff8510;
+		}
+		button#add:hover {
+			background-color: #ee7410;	
+		}
+		button#save {
+			background-color: #16a05c;	  
+		}
+		button#save:hover {
+			background-color: #15904b;	
+		}
+		button#save img, button#add img {
+			width: 18px;
+			height: 18px;
+			vertical-align: middle;
+			margin-right: 5px;
+			float: left;
+		}
+		.logo {
+			display: block;
+			margin: auto;
+			user-drag: none; 
+			user-select: none;
+			-webkit-user-drag: none;
+			-webkit-user-select: none;
+		}
+		.credit {
+			padding-right: 2em;
+			text-align: right;
+			color: #999;
+			font-size: .6em;
+			margin-top: 4em;
+			user-drag: none; 
+			user-select: none;
+			-webkit-user-drag: none;
+			-webkit-user-select: none;
+		}
+		.credit a {
+			color: #777;
+			text-decoration: none;
+			user-drag: none; 
+			user-select: none;
+			-webkit-user-drag: none;
+			-webkit-user-select: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<img src="logo.png" class="logo" alt="Loco Host"/>
+		<div id="items">
+			<div class="item">
+				<div class="form-group"><label>Name</label></div>
+				<div class="form-group"><label>URL</label></div>
+				<div class="form-group"><label>Port</label></div>
+				<div class="form-group"></div>
+			</div>
+		</div>
+
+		<div class="buttons">
+			<button id="add">Add an item <img src="glyphicons-191-plus-sign.svg"/></button>
+			<button id="save">Save <img src="glyphicons-194-ok-sign.svg"/></button>
+		</div>
+		<div id="status"></div>
+	</div>
+	<script src="options.js"></script>
+</body>
+</html>

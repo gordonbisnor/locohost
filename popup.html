@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+  <head>
+    <title>LocoHost</title>
+	  <style>
+      html, body {
+        min-width: 300px;
+        width: auto;
+        height: auto;
+      }
+      html, body, ul {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        display: flex;
+        font-size: 100%;
+        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+      }
+      ul {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+      }
+      li {
+        margin: 0;
+        padding: 1em;
+        text-align: left;
+        transition: background-color .125s, color .125s;
+        color: #177ff3;
+      }
+      li span {
+      }
+      li:hover {
+        background-color: #177ff3;
+        cursor: pointer;
+        color: white;
+      }
+      li:hover .port {
+        color: white
+      }
+      li + li {
+        border-top: 1px solid #CCC
+      }
+      .port {
+        float: right;
+        color: #cf3c91;
+        transition: color: .125s;
+      }
+      #status {
+        white-space: pre;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-width: 400px;
+      }
+	  </style>
+    <script src="popup.js"></script>
+  </head>
+  <body>
+    <div id="status"></div>
+  	<ul id="items">
+  	</ul>
+  </body>
+</html>
