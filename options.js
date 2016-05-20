@@ -83,7 +83,7 @@ function addItem (item) {
     let removeButton   = document.createElement("button");
     removeButton.className = "remove-button";
     let img = document.createElement("img");
-    img.src = "glyphicons-193-remove-sign.svg";
+    img.src = "close-circled.svg";
     removeButton.appendChild(img);
     formGroup = document.createElement('div');
     formGroup.className = "form-group remove";
